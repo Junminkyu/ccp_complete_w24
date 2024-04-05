@@ -1,0 +1,443 @@
+div.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:300px;
+    grid-gap: 20px;
+    justify-content: space-around;
+}
+
+div.grid.travel{
+  grid-template-columns:1fr 1fr 1fr 1fr 1fr;
+}
+div.grid.recipe{
+  grid-template-columns:1fr 1fr 1fr;
+}
+.city{
+  display: flex;
+}
+.city img{
+  width:800px;
+  height:400px;
+}
+
+body{
+    background: rgba(228, 238, 209, 0.556);
+    font-family: Arial, sans-serif;
+}
+
+.city{
+  display: block;
+  grid-template-columns: 1fr 1fr;
+}
+
+.skip{
+    position: absolute;
+    left: -5000px;
+}
+
+.skip:focus{
+    position:static;
+    display:block;  
+    text-align: center;
+    border:#0a807c solid 4px;
+    font-size:20px;
+}
+
+.navbar {
+  width: 100%;
+  height:50px;
+  background-color: #555;
+  overflow:hidden;
+  display:flex;
+}
+
+/* Navigation links */
+.navbar a {
+  height:50px;
+  display:inline-block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: x-large;
+  width: 25%; 
+  text-align: center; 
+}
+
+a.home{
+  background-color: rgba(0,106,184,.95);
+}
+a.pet{
+  background-color: #0a807c;
+}
+a.recipes{
+  background-color: rgba(144,59,80,.95)
+}
+a.travel{
+  background-color: #9613ba;
+}
+
+.navbar a:hover, .navbar a:focus{
+  background-color: #cda400;
+}
+
+a.home.active, a.pet.active, a.recipes.active, a.travel.active{
+  background-color: #cda400;
+  font-style:italic;
+  color:black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+
+#skip{
+    margin:1rem;
+}
+
+.grid img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  border:solid 5px brown;
+}
+
+.grid video{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  border:solid 5px brown;
+  margin-top:1rem;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height:500px;
+  border:solid 5px brown;
+  margin-top:1rem;
+}
+
+h1{
+  margin-top: 2rem;
+  text-align:center;
+  font-size:37px;
+  font-weight: bold;
+}
+
+h2{
+  margin-top:100px;
+  text-align: center;
+  font-weight:bold;
+  font-size:30px;
+}
+
+h3{
+  margin-top:2rem;
+  font-size:25px;
+  font-weight:bold;
+  text-align: center;
+}
+
+p{
+  margin-top: 2rem;
+}
+
+ul{
+  display:flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top:2rem;
+}
+
+
+ol li{
+  margin:1.5rem;
+}
+/* @media screen and (max-width:1200px){ */
+  .navbar {
+    width: 100%;
+    height:50px;
+    display:flex;
+    background-color: #555;
+  }
+  
+  /* Navigation links */
+  .navbar a {
+    height:50px;
+    display:inline-block;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: x-large;
+    width:100%;
+    text-align: center;
+  }
+
+  #skip{
+    margin:1rem;
+}
+
+.grid img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+.grid video{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+}
+
+img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:70%;
+  height:50%;
+}
+
+p{
+  line-height: 130%;
+}
+
+div.grid{
+  grid-template-columns: 1fr;
+  grid-template-rows:400px 400px 400px 400px;
+}
+
+div.grid.travel{
+  grid-template-columns: 1fr;
+  grid-template-rows:400px 400px 400px 400px 400px;
+}
+
+div.grid figure{
+  margin-top:30px;
+}
+div.grid.recipe{
+  grid-template-columns: 1fr;
+  grid-template-rows:400px 400px 400px;
+}
+ul{
+  display: contents;
+  margin: auto auto auto auto;
+}
+ul li{
+  display:block;
+  margin-top:20px;
+  margin-left:50px;
+}
+
+.city img{
+  width:400px;
+  height:200px;
+}
+
+.introduction .photo{
+  display:none;
+}
+
+.button{
+  position:fixed;
+  bottom:20px;
+  right:30px;
+  width:90px;
+  height:35px;
+  background-color:#cda400;
+  display: inline-block;
+  z-index: 1;
+}
+
+.button{
+  text-align: center;
+  color:black;
+  font-size: large;
+  padding:30px 15px;
+}
+
+
+a:visited,a:link{
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #8e782b;
+}
+
+
+img, video{
+  transition: all .3s ease;
+}
+
+img:hover, video:hover{
+  transform:translateY(-10px);
+}
+
+@media screen and (min-width:750px){
+  .introduction{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:200px 200px;
+    justify-content: space-evenly;
+    height:500px;    
+  }
+
+  .introduction .photo{
+    display:block;
+    grid-row:1/3;
+    grid-column:1/2;
+  }
+
+  .introduction .photo img{
+    height:500px;
+  }
+
+
+  .container{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 200px 200px 200px;
+    margin-bottom:50px;
+    margin-top:50px;
+  }
+
+  .container img{
+    grid-row:1/4;
+    grid-column:2;
+    height:90%;
+    width:80%;
+  }
+  
+  div.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows:300px;
+    grid-gap: 20px;
+    justify-content: space-around;
+  }
+
+
+  div.like{
+    margin-top:100px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  div.like li{
+    font-weight:bold;
+  }
+
+  div.menu{
+    display:grid;
+    grid-template-rows:100px 100px 100px 100px;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom:50px;
+  }
+
+  div.menu img{
+    grid-column:2;
+    grid-row:1/5;
+    height:400px;
+  }
+
+  div.menu h2{
+    margin-top:50px;
+  }
+
+  div.recipe{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    align-items: center;
+    margin-bottom:50px;
+    margin:20px 0 50px 0;
+    border:solid 2px brown;
+  }
+
+  div.step{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items: center;
+    margin-bottom:50px;
+    border:solid 2px brown;
+  }
+
+  div.step h3{
+    order:2;
+  }
+  
+  div.grid.recipe{
+    margin-top:50px;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 400px;
+    border:none;
+  }
+
+  div.grid.travel{
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 400px;
+    margin-bottom:100px;
+  }
+
+  div.destination{
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows: 250px 250px;
+  }
+  div.destination h3{
+    grid-row:2;
+    grid-column:1;
+  }
+  div.destination .gif{
+    grid-row:2;
+    grid-column:2
+  }
+  div.destination .city{
+    display:block;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gif {
+    display: none;
+  }
+  .destination img{
+    position:relative;
+    top:100px;
+  }
+  div.destination{
+    grid-template-rows: 200px 200px;
+  }
+}
+
+.background{
+  display: flex;
+  justify-content: center;
+}
+.typewriter h1 {
+  width:400px;
+  overflow:visible;
+  font-size: larger;
+  font-weight: bold;
+  color: #000000;
+  font-family: Arial, sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: black }
+}
